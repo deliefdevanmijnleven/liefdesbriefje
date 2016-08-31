@@ -1,0 +1,65 @@
+<html><head><title>De liefde van mijn leven</title>
+<style type="text/css">
+html,body{  padding:0;margin:0;}
+html{
+  background-image: url('verdriet2.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+body{
+  margin: 0 auto;
+  width: 750px;
+  background-color: rgba(255,255,255,0.80);
+  padding: 20px;
+} 
+h1{
+  background-image: url('deliefdevanmijnleven.png');
+  background-repeat: no-repeat;
+  color: transparent;
+  height: 220px;
+  width: 750px;
+} 
+#countup{
+  font-size: 18pt;
+}
+</style>
+</head><body>
+<h1>De liefde van mijn leven!</h1>
+<div id="countup">
+  <p>
+  <strong>Ik mis je</strong> al <span id="days">00</span> <span class="timeRefDays">dagen,</span> <span id="hours">00</span> <span class="timeRefHours">uur,</span>
+  <span id="minutes">00</span>  <span class="timeRefMinutes">minuten en</span>  <span id="seconds">00</span>  <span class="timeRefSeconds">seconden!</span>
+  </p>
+</div>
+<div>
+  <p>Ik kan je face-to-face <strong>in 10 seconden overtuigen voor het leven!</strong><br />
+     Wil je mij die kans geven? Jij kreeg ook een kans van mij.<br />
+     Je vriendin gooide die kans per ongeluk kapot. Ik vergeef het haar!<br />
+     Het spijt me! <strong>Het spijt me zo erg!</strong>
+  </p>
+<p>Je haalt het beste in me naar boven.<br />
+   Dat is wat liefde doet. Echte liefde. Liefde van jou!</p>
+  <p>Ik heb je nodig! Heel erg hard! Ik doe alles voor je!</p>
+  <p>Je kan me bereiken via <a href="mailto:deliefdevoorhetleven@gmail.com">deliefdevoorhetleven@gmail.com</p>
+</div>
+<script type="text/javascript">
+window.onload=function() {
+  counter('jun,11,2016,00:03:00');
+}
+function counter(countTo) {
+  now = new Date();
+  countTo = new Date(countTo);
+  difference = (now-countTo);
+  days=Math.floor(difference/(60*60*1000*24)*1);
+  hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
+  mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
+  secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
+  document.getElementById('days').firstChild.nodeValue = days;
+  document.getElementById('hours').firstChild.nodeValue = hours;
+  document.getElementById('minutes').firstChild.nodeValue = mins;
+  document.getElementById('seconds').firstChild.nodeValue = secs;
+  clearTimeout(counter.to);
+  counter.to=setTimeout(function(){ counter(countTo); },1000);
+}
+</script>
+</body></html>
